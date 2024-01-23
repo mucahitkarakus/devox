@@ -27,13 +27,19 @@ app.get('/contact', (req, res) => {
   res.render('site/contact')
 })
 
+app.get('/blog-single', (req, res) => {
+  res.render('site/blog-single')
+})
+
 app.get('/login', (req, res) => {
   res.render('site/login')
 })
 
-app.get('/blog-single', (req, res) => {
-  res.render('site/blog-single')
+app.get('/register', (req, res) => {
+  res.render('site/register')
 })
+
+
 
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`)

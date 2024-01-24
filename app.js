@@ -14,6 +14,8 @@ mongoose.connect('mongodb://27017/nodeblog_db');
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+const main = require('./routes/main')
+app.use('/', main)
 
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`)

@@ -26,6 +26,10 @@ router.get('/login', (req, res) => {
     res.render('site/login')
 })
 
+router.get('/posts/new', (req, res) => {
+    res.render('site/addpost')
+})
+
 router.get('/register', (req, res) => {
     res.render('site/register')
 })

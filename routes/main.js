@@ -34,5 +34,9 @@ router.get('/register', (req, res) => {
     res.render('site/register')
 })
 
+router.post('/posts/test', (req, res) => {
+    res.redirect('/')
+})
+
 
 module.exports = router

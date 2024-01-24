@@ -1,5 +1,6 @@
 const path = require('path')
 const express = require('express')
+const mongoose = require('mongoose');
 const exphbs = require('express-handlebars')
 const app = express()
 const port = 3000
@@ -7,6 +8,8 @@ const hostname = '127.0.0.1'
 const hbs = exphbs.create();
 
 app.use(express.static('public'))
+
+mongoose.connect('mongodb://27017/nodeblog_test_db');
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -44,4 +47,3 @@ app.get('/register', (req, res) => {
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`)
 })
-

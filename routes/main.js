@@ -35,6 +35,7 @@ router.get('/register', (req, res) => {
 })
 
 router.post('/posts/test', (req, res) => {
+    console.log(req.body)
     res.redirect('/')
 })
 

@@ -22,7 +22,10 @@ app.use(bodyParser.json())
 
 
 const main = require('./routes/main')
+const posts = require('./routes/posts')
+
 app.use('/', main)
+app.use('/posts', posts)
 
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`)

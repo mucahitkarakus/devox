@@ -26,18 +26,8 @@ router.get('/login', (req, res) => {
     res.render('site/login')
 })
 
-router.get('/posts/new', (req, res) => {
-    res.render('site/addpost')
-})
-
 router.get('/register', (req, res) => {
     res.render('site/register')
 })
-
-router.post('/posts/test', (req, res) => {
-    console.log(req.body)
-    res.redirect('/')
-})
-
 
 module.exports = router

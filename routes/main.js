@@ -8,31 +8,30 @@ router.get('/', (req, res) => {
 })
 
 router.get('/about', (req, res) => {
-    res.render('site/about')
-})
+    res.render('site/about');
+});
 
 router.get('/blog', (req, res) => {
     Post.find({}).lean().then(posts => {
         console.log(posts)
-        res.render('site/blog', { posts: posts })
-    })
-
-})
+        res.render('site/blog', { posts: posts });
+    });
+});
 
 router.get('/contact', (req, res) => {
-    res.render('site/contact')
-})
+    res.render('site/contact');
+});
 
-router.get('/posts', (req, res) => {
-    res.render('site/post')
-})
+router.get('/post', (req, res) => {
+    res.render('site/post');
+});
 
 router.get('/login', (req, res) => {
-    res.render('site/login')
-})
+    res.render('site/login');
+});
 
 router.get('/register', (req, res) => {
-    res.render('site/register')
-})
+    res.render('site/register');
+});
 
 module.exports = router

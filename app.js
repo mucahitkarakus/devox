@@ -20,6 +20,13 @@ app.set("view engine", "handlebars");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+const myMiddleware = (req, res, next) => {
+  console.log("Middleware çalıştı");
+  next();
+};
+
+app.use('/', myMiddleware);
+
 app.use(bodyParser.json());
 
 const main = require("./routes/main");

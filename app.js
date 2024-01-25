@@ -7,8 +7,11 @@ const hostname = "127.0.0.1";
 const hbs = exphbs.create();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const fileUpload = require("express-fileupload");
 
 mongoose.connect("mongodb://localhost:27017/nodeblog_db");
+
+app.use(fileUpload());
 
 app.use(express.static("public"));
 

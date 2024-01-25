@@ -6,6 +6,12 @@ router.get("/new", (req, res) => {
     res.render("site/addpost");
 });
 
+router.get("/:id", (req, res) => {
+    Post.findById(req.params.id).then((post) => {
+        res.render("site/post", { post: post.toJSON() });
+    });
+});
+
 router.post("/test", (req, res) => {
     Post.create(req.body);
     res.redirect("/");

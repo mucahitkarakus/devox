@@ -23,7 +23,7 @@ router.get('/contact', (req, res) => {
     res.render('site/contact')
 })
 
-router.get('/post', (req, res) => {
+router.get('/posts', (req, res) => {
     res.render('site/post')
 })
 

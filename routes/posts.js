@@ -9,6 +9,7 @@ router.get("/new", (req, res) => {
 router.post("/test", (req, res) => {
     Post.create(req.body);
     res.redirect("/");
+    console.log(req.body);
 });
 
 module.exports = router;

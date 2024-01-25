@@ -23,8 +23,8 @@ router.get('/contact', (req, res) => {
     res.render('site/contact')
 })
 
-router.get('/blog-single', (req, res) => {
-    res.render('site/blog-single')
+router.get('/post', (req, res) => {
+    res.render('site/post')
 })
 
 router.get('/login', (req, res) => {
